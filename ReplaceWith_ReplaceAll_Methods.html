@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // Replace with
+               $('#btnReplaceWith').click(function(){
+                  $('#bdy h1').replaceWith("<h3> This is Replace With Tag </h3>")
+                  $('#bdy p').replaceWith("Replace with Text Tag")
+               });
+
+                // Replace All
+                $('#btnReplaceAll').click(function(){
+                  $("<h3> This is Replace All Tag </h3>").replaceAll('#bdy h1')
+                  $("<h3> This is Replace All Tag </h3>").replaceAll('#bdy p')
+               });
+              
+         });
+     </script>
+<head>
+   <body>
+   <div id="bdy" style="background-color: palegreen;">
+      <h1> JQuery Information</h1>
+      <p>jQuery is a JavaScript library designed to simplify HTML DOM</p>
+   </div>
+   <button id="btnReplaceWith"> Replace With</button> 
+   <button id="btnReplaceAll"> Replace All</button>
+</body>
+</html>
